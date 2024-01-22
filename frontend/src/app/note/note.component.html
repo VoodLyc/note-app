@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="buttons-container">
+        <button (click)="createNote()"><i class='bx bxs-plus-circle'></i>New Note</button>
+    </div>
+    <ng-multiselect-dropdown [placeholder]="'Filter by tag'" [settings]="dropdownSettings" [data]="dropdownList"
+        [(ngModel)]="selectedItems" (onSelect)="handleTagsFiltering()" (onSelectAll)="handleTagsFiltering()" (onDeSelect)="handleTagsFiltering()" (onDeSelectAll)="clearFilter()">
+    </ng-multiselect-dropdown>
+    <div class="notes-container">
+        <app-note-card *ngFor="let note of notes" [note]="note" (click)="setSelectedNote(note)"></app-note-card>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+button {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 8px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #277dff;
+}
+
+button i {
+    font-size: 16px;
+    margin-left: 2px;
+}

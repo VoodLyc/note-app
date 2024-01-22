@@ -1,0 +1,37 @@
+.container {
+    height: 40px;
+    width: 200px;
+    border: 2px solid rgba(0, 0, 0, .07);
+    border-radius: 5px;
+}
+
+i {
+    color: #277dff;
+    font-size: 20px;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    margin-right: 4px;
+    cursor: pointer;
+}

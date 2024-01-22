@@ -1,0 +1,6 @@
+<div class="container">
+    <button (click)="addTag()"><i class='bx bxs-plus-circle'></i>New Tag</button>
+    <div class="tags-container">
+        <app-tag-card *ngFor="let tag of tags" [tag]="tag"></app-tag-card>
+    </div>
+</div>

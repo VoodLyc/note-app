@@ -1,0 +1,4 @@
+<div class="card" [ngClass]="{'card--archived': !note.active, 'card--selected': note.id == selectedId}" >
+    <span class="card__title">{{ note.title }}</span>
+    <span class="card__text">{{ note.content }}</span>
+</div>

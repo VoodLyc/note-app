@@ -1,0 +1,14 @@
+.container {
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #080808;
+}
+
+.item {
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

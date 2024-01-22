@@ -1,0 +1,11 @@
+<div class="container">
+    <form [formGroup]="tagForm" (ngSubmit)="onSubmit()">
+        <input id="name" formControlName="name" placeholder="Enter your tag">
+        <button type="submit" *ngIf="tagForm.dirty">
+            <i class='bx bxs-save'></i>
+        </button>
+        <button (click)="deleteTag()">
+            <i class='bx bxs-x-circle'></i>
+        </button>
+    </form>
+</div>

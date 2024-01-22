@@ -1,0 +1,15 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.router-container {
+    height: 100%;
+    width: 350px;
+}
+
+.editor-container {
+    height: 100%;
+    width: 100%;
+}

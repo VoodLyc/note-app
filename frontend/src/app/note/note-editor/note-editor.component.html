@@ -1,0 +1,18 @@
+<div class="container">
+    <form [formGroup]="noteForm" class="form" (ngSubmit)="onSubmit()">
+        <div class="buttons-container">
+            <button type="submit" [disabled]="!noteForm.valid"><i class='bx bxs-save'></i> Save</button>
+            <button (click)="toggleActive()" [disabled]="note.id == -1">
+                <i *ngIf="note.active" class='bx bxs-archive-in'></i> <i *ngIf="!note.active" class='bx bxs-archive-out'></i>
+                {{ note.active ? "Archive" : "Unarchive"}}
+            </button>
+            <button (click)="deleteNote()" [disabled]="note.id == -1"><i class='bx bxs-trash'></i> Delete</button>
+        </div>
+        <input type="text" id="title" placeholder="Title" formControlName="title" class="form__title-input">
+        <textarea id="content" placeholder="Write your note" formControlName="content" class="form__content-input"></textarea>
+    </form>
+    <div class="tags-container">
+        <app-tag-preview *ngFor="let tag of note.tags" [tag]="tag" (deleteTagEvent)="deleteTag($event)"></app-tag-preview>
+        <ng-select [items]="tagsOptions" placeholder="Add tag" bindLabel="name" bindValue="id" [(ngModel)]="selectedTag" (change)="addTag($event)" [disabled]="!noteForm.valid"></ng-select>
+    </div>
+</div>
